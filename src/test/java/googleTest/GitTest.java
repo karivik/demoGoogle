@@ -17,8 +17,11 @@ public class GitTest {
 		driver.get("https://google.com");
 		String title = driver.getTitle();
 		System.out.println("Title :"+title);
-		String gmail = driver.findElement(By.xpath("//*[@class='gb_h gb_i']/a")).getText();
+		String gmail = driver.findElement(By.xpath("//*[@class='gb_h gb_i']/a[@data-pid='23']")).getText();
 		System.out.println("gmail :"+gmail);
+		
+		String image = driver.findElement(By.xpath("//*[@class='gb_h gb_i']/a[@data-pid='2']")).getText();
+		System.out.println("image :"+image);
 		driver.quit();
 
 	}
